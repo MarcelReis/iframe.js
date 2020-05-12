@@ -2,10 +2,18 @@ import createProxy from "./proxy";
 
 const Proxy = createProxy("player");
 
-document.querySelector("button").addEventListener("click", () => {
-	Proxy.trigger("play", "dQw4w9WgXcQ");
+document.querySelector(".btn-play").addEventListener("click", () => {
+	Proxy.trigger("play");
 });
 
-Proxy.on("songPlayed", (songId) => {
-	console.log(`songPlayed ${songId}`);
+document.querySelector(".btn-pause").addEventListener("click", () => {
+	Proxy.trigger("pause");
+});
+
+Proxy.on("playerReady", () => {
+	console.log("playerReady");
+});
+
+Proxy.on("stateChange", (state) => {
+	console.log(`stateChange ${state}`);
 });
