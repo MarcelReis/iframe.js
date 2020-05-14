@@ -12,6 +12,8 @@ Testando
 - abrir player.html
 
 To Do:
+- receber parâmetro pela url (ou pelo init)
+- reaproveitar iframe do youtube para tocar próxima música
 - passar o `targetOrigin` correto para manter a segurança
 - evitar memory leak limpando eventos do window ao destruir o player  (implementar o destroy)
 - o proxy ao ouvir as mensagens do window não faz de qual instância o evento pertence (passar um id da instância?)
